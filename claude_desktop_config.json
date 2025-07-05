@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "python-edu-server": {
+      "command": "python",
+      "args": ["C:\\Users\\Surya\\submitAish\\mcp_server.py"],
+      "env": {}
+    }
+  }
+}

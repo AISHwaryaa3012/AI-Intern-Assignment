@@ -1,0 +1,22 @@
+=== MCQ Generation Test ===
+Command: POST /generate_mcqs {"topic": "Python", "count": 3}
+Response:
+{
+  "questions": [
+    {
+      "question": "What is variables used for in Python?",
+      "options": ["A. Code repetition", "B. Data storage", "C. Both A and B", "D. None"],
+      "answer": "A"
+    },
+    ... (other questions)
+  ]
+}
+
+=== Lesson Plan Test ===
+Command: POST /generate_lesson_plan {"subject": "algebra"}
+Response:
+{
+  "topic": "algebra",
+  "objectives": ["Understand algebra fundamentals", "Apply algebra in real-world scenarios"],
+  "activities": ["Lecture: algebra basics", "Hands-on algebra exercises"]
+}
