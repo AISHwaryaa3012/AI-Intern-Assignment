@@ -1,9 +1,31 @@
 {
-  "mcpServers": {
-    "python-edu-server": {
-      "command": "python",
-      "args": ["C:\\Users\\Surya\\submitAish\\mcp_server.py"],
-      "env": {}
+  "mcp_servers": [
+    {
+      "name": "EduChain Server",
+      "base_url": "http://localhost:8000",
+      "enabled": true,
+      "tools": [
+        {
+          "name": "generate_mcqs",
+          "description": "Generate multiple-choice questions",
+          "endpoint": "/tools/generate_mcqs",
+          "parameters": {
+            "topic": {"type": "string", "required": true},
+            "num_questions": {"type": "integer", "default": 5},
+            "difficulty": {"type": "string", "default": "medium"}
+          }
+        },
+        {
+          "name": "get_lesson_plan",
+          "description": "Generate lesson plans",
+          "endpoint": "/resources/get_lesson_plan",
+          "parameters": {
+            "subject": {"type": "string", "required": true},
+            "grade_level": {"type": "string", "default": "middle school"},
+            "duration": {"type": "string", "default": "1 hour"}
+          }
+        }
+      ]
     }
-  }
+  ]
 }
